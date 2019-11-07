@@ -1,0 +1,26 @@
+<idea-plugin>
+    <id>cn.chen.copy-no-indentation</id>
+    <name>Copy with no indentation</name>
+<!--    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>-->
+
+    <description>Copy with no indentation</description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="CopyNoIndentation" class="CopyNoIndentationAction" text="Copy No Indentation">
+            <add-to-group group-id="CutCopyPasteGroup" anchor="first"/>
+            <add-to-group group-id="EditorPopupMenu1" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift X"/>
+        </action>
+    </actions>
+</idea-plugin>
